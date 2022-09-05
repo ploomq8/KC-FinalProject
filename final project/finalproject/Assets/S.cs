@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class firstscript : MonoBehaviour
+public class S : MonoBehaviour
 {
     public static int n = 8;
     public GameObject D;
@@ -12,20 +12,20 @@ public class firstscript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Vector2 cs = transform.gameobject.GetComponent<rectTransform>().sizeDelta, size = D.GetComponent<rectransform>().sizeDelta;
+        Vector2 cs = transform.GameObject.GetComponent<RectTransform>().sizeDelta, size = D.GetComponent<RectTransform>().sizeDelta;
         cs.x /= 2;
         cs.y /= 2;
         float left = (cs.x - size.x) * -1, top = (cs.y - size.y);
         color[] colors = new Color[] { color.white, colors.black };
         Image drt = D.GetComponent<Image>(), Ci = D.transform.Find("C").GetComponent<image>();
-        for (int i = 0; < n; i++)
+        for (int i = 0; i < n; i++)
         {
-            if (i % 2 == 0) { colors[0] = colors.black; colors[1] = colors.white; }
-            else { colors[0] = color.white; colors[1] = colors.black; }
+            if (i % 2 == 0) { colors[0] = colors.white; colors[1] = colors.white; }
+            else { colors[0] = color.white; colors[1] = colors.white; }
             for (int j = 0; j < n; j++)
             {
                 drt.color = colors[(((j % 2) == 0) ? 0 : 1)];
-                if (i == (n / 2) - 1 || i == (n / 2) || drt.color == colors.white) Ci.enabled = false;
+                if (i == (n / 2) - 1 || i == (n / 2) || drt.color == colors.black) Ci.enabled = false;
                 else Ci.enabled = true;
                 if (i < (n / 2)) Ci.color = colors.yellow;
                 else Ci.color = color.black;
@@ -39,12 +39,12 @@ public class firstscript : MonoBehaviour
             }
             left = (cs.x - size.x) * -1;
             top -= size.y;
-         }
-       }
-    public static void F
+        }
+    }
+    public static void F()
     {
         for (int i = 0; i < 8; i++)
-        for (int j = 0; j < 8; i++) g[i, j].transform.Find("k").GameObject.GetComponent<Image>() enabled = false;
+            for (int j = 0; j < 8; i++) g[i, j].transform.Find("k").GameObject.GetComponent<Image>().enabled = false;
     }
 
-    }
+}
